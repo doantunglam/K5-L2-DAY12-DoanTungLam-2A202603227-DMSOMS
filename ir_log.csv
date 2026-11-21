@@ -1,0 +1,8 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,"Ảnh IR mô phỏng (xám) làm cốc và khối vải trên ghế sau hiện rõ, ảnh RGB cùng cảnh quá tối nên chỉ thấy sau khi tăng brightness trong CVAT",object,"Gán object theo hình dạng thấy trên từng ảnh; không ghi hiện tượng IR thật (phản xạ LED) cho ảnh mô phỏng"
+S06_ir,IR_sim,"Quai xách của ghế em bé và hình dạng ghế nhìn rõ trên IR, trên RGB tối chỉ thấy lờ mờ",infant_seat,"Vẽ box infant_seat sát phần thấy được ở cả hai ảnh; facing để theo hình dạng ghế"
+S04_ir,IR_sim,"Màu áo đỏ của người ngồi ghế sau mất đi trên IR, chỉ còn độ sáng",person,"Nhận người bằng hình dạng và ngữ cảnh, không đoán bằng màu (quy tắc chung 4)"
+D02,real_IR,"Ảnh NIR rất tối, mặt tài xế nằm sát mép phải khung hình, chỉ thấy mí mắt sau khi tăng contrast",eye_left / eye_right,"Ghi closed khi thấy hai mí khép; phần mũi và miệng ước lượng nên cần cờ khi đặt face13"
+D03,real_IR,"Gọng kính mảnh hiện thành đường sáng trên mặt nghiêng, mặt gần như nhìn nghiêng nên không thấy mắt",glasses,"Ghi glasses=clear vì thấy gọng; mắt để unknown, không vẽ face13"
+D05,real_IR,"Kính đang cầm trên tay, mắt khó phân biệt",glasses,"Ghi glasses=none vì kính không đeo trên mặt; mắt để unknown"
+D06,real_IR,"Tay che mũi và miệng",face13 (nose_tip; mouth_left; mouth_right; lip_upper; lip_lower),"Hai mắt thấy rõ nên đặt điểm; mũi và miệng đánh outside, không đặt điểm cho đủ"
